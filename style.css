@@ -1,0 +1,255 @@
+/* Global reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+  padding: 1rem;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Summary cards */
+.summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 200px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Form */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form select,
+form button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  grid-column: 1 / -1;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #218838;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+table th {
+  background: #f0f0f0;
+}
+
+/* Footer */
+footer p {
+  font-size: 0.9rem;
+  color: #666;
+}
+/* Add Expense section */
+#add-expense {
+  margin-bottom: 2rem;
+}
+
+.expense-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.expense-form label {
+  font-weight: bold;
+}
+
+.expense-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+/* Your Expenses section */
+#your-expenses {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#your-expenses h2 {
+  margin-bottom: 0.5rem;
+}
+
+#your-expenses p {
+  color: #666;
+  font-style: italic;
+}
+/* Expense table styling */
+#expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+#expenses-table th,
+#expenses-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+#expenses-table th {
+  background: #4caf50;       /* green header */
+  color: #fff;
+}
+
+/* Alternating row colors */
+#expenses-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Hover effect on rows */
+#expenses-table tr:hover {
+  background: #f1f1f1;
+  cursor: default;
+}
+/* Pointer cursor on Add Expense button */
+#add-expense-form button {
+  cursor: pointer;
+}
+/* ==============================
+   Advanced CSS Selectors (Step 5)
+   ============================== */
+
+/* 1. Descendant selector
+   Targets <td> elements inside #your-expenses */
+#your-expenses td {
+  font-size: 0.95rem;
+}
+
+/* 2. Direct child selector
+   Targets direct child inputs/selects/button inside .expense-form */
+.expense-form > input,
+.expense-form > select,
+.expense-form > button {
+  width: 100%;
+}
+
+/* 3. Pseudo-class based on position
+   You already have this for alternating rows; here it is explicitly: */
+
+
+/* Optional extra position-based example:
+   Style the first row (header) differently */
+#expenses-table tr:first-child {
+  font-weight: bold;
+}
+
+/* 4. Negation pseudo-class
+   Style all inputs except those with type="submit" */
+input:not([type="submit"]) {
+  border-radius: 4px;
+}
+
+/* 5. Focus state for inputs
+   Highlight inputs and selects when focused */
+input:focus,
+select:focus {
+  outline: 2px solid #4caf50;
+  border-color: #4caf50;
+}
+#how-to-use {
+  margin-bottom: 2rem;
+}
+
+#how-to-use summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #2e7d32;
+  user-select: none;
+}
+
+#how-to-use details {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+}
